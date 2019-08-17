@@ -1,3 +1,8 @@
+<!--
+	@author Harshita Shrivastava
+	-->
+
+<!DOCTYPE>
 <html>
 	<head>
 		
@@ -10,19 +15,19 @@
 					var grade = "";	 //declare a variable for grade
 					var  result="";	 //declare a variable for result
 
-					//read the marks
+					/*read the marks */
 					var engMarks = document.getElementById('txtEnglish').value;
-					var kannadaMarks = document.getElementById('txtKannada').value;
+					var hindiMarks = document.getElementById('txtHindi').value;
 					var mathsMarks = document.getElementById('txtMaths').value;
 					var scienceMarks = document.getElementById('txtScience').value;
 					
-					//calculate the total marks (using double notation technique)
-					var totalMarks = engMarks - (- kannadaMarks) - (- mathsMarks) - (- scienceMarks);
+					/* calculate the total marks (using double notation technique) */
+					var totalMarks = engMarks - (- hindiMarks) - (- mathsMarks) - (- scienceMarks);
 					
-					//get the average marks
+					/* get the average marks */
 					var averageMarks = totalMarks / 4;					
 					
-					//find the grade and result using the ternary operator inside the switch statement					
+					/*find the grade and result using the ternary operator inside the switch statement	*/				
 					switch(
 					
 							//usage of ternary operator inside switch
@@ -33,14 +38,18 @@
 						  )
 							
 							{
-								case 1 :grade = "A";result="First Class";break;
-								case 2 :grade = "B"; result="Second Class";break;
-								case 3 :grade = "C"; result="Third Class";break;
-								case 0 :grade = "D"; result="Fail";break;
+								case 1 :grade = "A";result="First Class";
+								break;
+								case 2 :grade = "B"; result="Second Class";
+								break;
+								case 3 :grade = "C"; result="Third Class";
+								break;
+								case 0 :grade = "D"; result="Fail";
+								break;
 							}
 							
 						
-					//display the results	
+					/*display the results */	
 					document.getElementById('txtStudentName').value = document.getElementById('txtName').value;
 					document.getElementById('txtStudentClass').value = document.getElementById('txtClass').value;
 					document.getElementById('txtTotalMarks').value = totalMarks;
@@ -48,7 +57,9 @@
 					document.getElementById('txtGrade').value = grade;
 					document.getElementById('txtResult').value = result;
 		
-		} //end of function getReport
+		} 
+		/**
+		End of function getReport **/
 		
 		</script>
 	</head>
@@ -59,7 +70,7 @@
 				Class:<input type="text" id="txtClass"> <br/><br/>
 				<table border="1">
 					<tr><td>English</td><td><input type="text" id="txtEnglish"></td></tr>
-					<tr><td>Kannada</td><td><input type="text" id="txtKannada"></td></tr>
+					<tr><td>Hindi</td><td><input type="text" id="txtHindi"></td></tr>
 					<tr><td>Maths</td><td><input type="text" id="txtMaths"></td></tr>
 					<tr><td>Science</td><td><input type="text" id="txtScience"></td></tr>				
 				</table><br/><br/>
